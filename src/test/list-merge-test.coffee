@@ -23,7 +23,7 @@ describe 'mergeLists', ->
     mergeNumberLists([4,5],[5,6]).should.deep.equal [4,5,6]
     
   it 'should produce a list sorted according to the comparator', ->
-    mergeNumberLists([10,8],[9,1]).should.deep.equal [1,8,9,10]
+    mergeNumberLists([10,8],[9,7]).should.deep.equal [7,8,9,10]
 
   compareNums = (a, b) ->
     if (a == b) then 0 else (a - b) / Math.abs(a - b)

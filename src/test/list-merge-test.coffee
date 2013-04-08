@@ -25,6 +25,9 @@ describe 'mergeLists', ->
   it 'should produce a list sorted according to the comparator', ->
     mergeNumberLists([10,8],[9,7]).should.deep.equal [7,8,9,10]
 
+  it 'should default to natural ordering of the list elements', ->
+    mergeLists()(['c','a','b'],['f','e','d']).should.deep.equal ['a', 'b', 'c', 'd', 'e', 'f']
+
   compareNums = (a, b) ->
     if (a == b) then 0 else (a - b) / Math.abs(a - b)
 

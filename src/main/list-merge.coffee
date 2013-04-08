@@ -1,4 +1,9 @@
-mergeLists = (comparator, mergeFunction) ->
+defaultComparator = (a,b) ->
+  if (a > b) then 1
+  else if (a == b) then 0
+  else -1
+
+mergeLists = (comparator = defaultComparator, mergeFunction = (a,b) -> a) ->
   (left, right) ->
     mergeSorted = (left, right) ->
       if (right.length == 0) then return left else if (left.length == 0) then return right

@@ -3,7 +3,7 @@ fs = require 'fs'
 {print} = require 'sys'
 {spawn} = require 'child_process'
 srcDir = 'src/main/'
-destDir = 'target'
+destDir = 'lib'
 
 build = (callback) ->
   coffee = spawn './node_modules/.bin/coffee', ['-c', '-o', destDir, srcDir]

@@ -1,10 +1,11 @@
 {
     "name": "list-merge",
-    "description": "Function to merge lists of objects in CoffeeScript",
+    "description": "Function to merge lists of objects",
     "version": "1.0.0",
     "dependencies":{
         "coffee-script": "1.6.x",
         "mocha": "*",
         "chai": "*"
-    }
+    },
+    "main": "./lib/list-merge.js"
 }
